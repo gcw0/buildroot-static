@@ -28,7 +28,11 @@ SDL_IMAGE_CONF_OPTS = \
 	--enable-webp=$(if $(BR2_PACKAGE_SDL_IMAGE_WEBP),yes,no) \
 	--enable-xcf=$(if $(BR2_PACKAGE_SDL_IMAGE_XCF),yes,no) \
 	--enable-xpm=$(if $(BR2_PACKAGE_SDL_IMAGE_XPM),yes,no) \
-	--enable-xv=$(if $(BR2_PACKAGE_SDL_IMAGE_XV),yes,no)
+	--enable-xv=$(if $(BR2_PACKAGE_SDL_IMAGE_XV),yes,no) \
+	--disable-jpg-shared \
+	--disable-webp-shared \
+	--disable-png-shared \
+	--disable-tif-shared
 
 SDL_IMAGE_DEPENDENCIES = sdl \
 	$(if $(BR2_PACKAGE_SDL_IMAGE_JPEG),jpeg) \
