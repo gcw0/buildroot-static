@@ -25,7 +25,7 @@ endif
 
 ifeq ($(BR2_PACKAGE_LIBMAD),y)
 SDL_MIXER_CONF_OPTS += --enable-music-mp3-mad-gpl
-SDL_MIXER_DEPENDENCIES += libmikmod
+SDL_MIXER_DEPENDENCIES += libmad
 else
 ifeq ($(BR2_PACKAGE_MPG123),y)
 SDL_MIXER_CONF_OPTS += --enable-music-mp3
