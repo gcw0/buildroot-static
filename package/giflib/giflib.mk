@@ -21,6 +21,8 @@ GIFLIB_BUILD_LIBS = static-lib shared-lib
 GIFLIB_INSTALL_LIBS = install-lib
 endif
 
+GIFLIB_OPTS += -mno-abicalls -fno-PIC
+
 define GIFLIB_BUILD_CMDS
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) -C $(@D) $(GIFLIB_BUILD_LIBS)
 endef
