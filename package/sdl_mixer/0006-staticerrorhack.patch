@@ -272,6 +272,7 @@
 -	/* Not reached, but fixes compiler warnings */
 -	return 0;
 -}
+
 +int main(){}
 --- a/playwave.c
 +++ b/playwave.c
