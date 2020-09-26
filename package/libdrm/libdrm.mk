@@ -17,6 +17,8 @@ LIBDRM_DEPENDENCIES = \
 LIBDRM_CONF_OPTS = \
 	-Dcairo-tests=false \
 	-Dmanpages=false
+	
+LIBDRM_CONF_OPTS += -Db_pie=false -Db_staticpic=false
 
 ifeq ($(BR2_PACKAGE_LIBATOMIC_OPS),y)
 LIBDRM_DEPENDENCIES += libatomic_ops
